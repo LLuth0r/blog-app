@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const controller = require('../controller/posts')
+const controller = require('../db/posts')
 const router = Router()
 
 router.get('/posts', controller.getPosts)

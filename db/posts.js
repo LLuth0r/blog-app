@@ -1,6 +1,6 @@
 const Post = require('../models/post')
-const db = require('../db/connection')
-const { get } = require('../db/connection')
+const db = require('../controller/connection')
+const { get } = require('../controller/connection')
 const { post } = require('../routes/posts')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
