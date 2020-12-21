@@ -1,19 +1,23 @@
-  // ************************************************************ make this a service in services dir
-  let [posts, setPosts] = useState([]);
-  const [toggleFetch, setToggleFetch] = useState(false);
+import { getPosts } from "../../services/posts"
+import { useState } from "react"
 
-  // get posts
-  useEffect(() => {
-    const getPosts = async () => {
-      await axios
-        .get("https://unit3-blog-app.herokuapp.com/posts")
-        .then((response) => {
-          setPosts(response.data);
-          console.log(response.data);
-        })
-        .catch((error) => {
-          console.log(`Error: ${error}`);
-        });
-    };
-    getPosts();
-  }, [toggleFetch]);
+
+function PostCards(){
+
+  const [posts, setPosts] = useState([])
+  const posts = await getPosts()
+  setPosts(posts)
+
+  const CARDS = posts.reverse().map((post, index) =>
+  index < 8 ? <PostCard _id={post._id} name={post.title} imgURL={post.imgURL} content={post.content} key={index} /> : <h1>loading...</h1>
+  )
+
+  return (
+    <div>
+      {CARDS}
+    </div>
+  )
+
+}
+
+export default PostCards

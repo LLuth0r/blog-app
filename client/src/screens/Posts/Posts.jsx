@@ -1,7 +1,6 @@
 import "./Posts.css";
 import { getProducts } from "../../services/posts";
 import axios from "axios"
-import { useEffect, useState } from "react";
 import Layout from '../../components/shared/Layout/Layout'
 import PostCards from '../../components/PostCards/PostCards'
 

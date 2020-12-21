@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const apiUrl = `https://unit3-blog-app.herokuapp.com/posts`
+const apiUrl = `https://unit3-blog-app.herokuapp.com/api`
 
 export const getPosts = async () => {
   try {
