@@ -1,7 +1,12 @@
-import './PostDetail.css'
+import "./PostDetail.css";
+import Layout from "../../components/shared/Layout/Layout";
 
-function PostDetail(){
-    return null
+function PostDetail() {
+  return (
+    <Layout>
+      <div>Winning</div>
+    </Layout>
+  );
 }
 
-export default PostDetail
+export default PostDetail;
