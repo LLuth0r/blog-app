@@ -1,7 +1,6 @@
 import { getPosts } from "../../services/posts";
 import { useState, useEffect } from "react";
 import PostCard from "../PostCard/PostCard";
-import Layout from "../shared/Layout/Layout";
 
 function PostCards() {
   const [posts, setPosts] = useState([]);
