@@ -1,7 +1,9 @@
 import './PostCreate.css'
 
 function PostCreate(){
-    return null
+  return (
+      <div>It's ALIVEEEEEEE!!</div>
+    )
 }
 
 export default PostCreate

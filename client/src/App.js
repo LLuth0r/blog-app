@@ -2,9 +2,9 @@ import './App.css';
 
 
 // screen components
-import Posts from "./src/screens/Posts"
-import PostCreate from "./src/screens/PostCreate"
-import PostDetail from "./src/screens/PostDetail"
+import Posts from "../src/screens/Posts/Posts"
+import PostCreate from "../src/screens/PostCreate/PostCreate"
+import PostDetail from "../src/screens/PostDetail/PostDetail"
 
 
 // tools
@@ -16,9 +16,9 @@ function App() {
   return (
     <div className='app'>
       <Switch>
-        <Route exact path="/"><Posts posts={posts} key={posts._id} setToggleFetch={setToggleFetch} /></Route>
-        <Route path='/:id'><PostDetail setToggleFetch={setToggleFetch} /></Route>
-        <Route path='/createPost'><PostCreate setToggleFetch={setToggleFetch} /></Route>
+        <Route exact path="/"><Posts /></Route>
+        <Route path='/:id'><PostDetail /></Route>
+        <Route path='/createPost'><PostCreate /></Route>
       </Switch>
     </div>
   );
