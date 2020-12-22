@@ -21,9 +21,9 @@ function PostCards () {
   )
 
   return (
-    <div>
+      <>
       {CARDS}
-    </div>
+      </>
   )
 
 }
