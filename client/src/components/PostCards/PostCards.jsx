@@ -1,23 +1,36 @@
-import { getPosts } from "../../services/posts"
-import { useState } from "react"
+import { getPosts } from "../../services/posts";
+import { useState, useEffect } from "react";
+import PostCard from "../PostCard/PostCard";
+import Layout from "../shared/Layout/Layout";
 
+function PostCards() {
+  const [posts, setPosts] = useState([]);
 
-function PostCards(){
+  useEffect(() => {
+    const postsResponse = async () => {
+      const response = await getPosts();
+      console.log(response);
+      setPosts(response);
+    };
+    postsResponse();
+  }, []);
 
-  const [posts, setPosts] = useState([])
-  const posts = await getPosts()
-  setPosts(posts)
+  const CARDS = posts.map((post, index) =>
+    index < 8 ? (
+      <PostCard
+        _id={post._id}
+        title={post.title}
+        imgURL={post.imgURL}
+        content={post.content}
+        author={post.author}
+        key={index}
+      />
+    ) : (
+      <h1>loading...</h1>
+    )
+  );
 
-  const CARDS = posts.reverse().map((post, index) =>
-  index < 8 ? <PostCard _id={post._id} name={post.title} imgURL={post.imgURL} content={post.content} key={index} /> : <h1>loading...</h1>
-  )
-
-  return (
-    <div>
-      {CARDS}
-    </div>
-  )
-
+  return <>{CARDS}</>;
 }
 
-export default PostCards
+export default PostCards;
