@@ -2,9 +2,9 @@ import './App.css';
 
 
 // screen components
-import Posts from "../src/screens/Posts/Posts"
-import PostCreate from "../src/screens/PostCreate/PostCreate"
-import PostDetail from "../src/screens/PostDetail/PostDetail"
+import Posts from "./screens/Posts/Posts"
+import PostCreate from "./screens/PostCreate/PostCreate"
+import PostDetail from "./screens/PostDetail/PostDetail"
 
 
 // tools
@@ -16,9 +16,10 @@ function App() {
   return (
     <div className='app'>
       <Switch>
-        <Route exact path="/"><Posts /></Route>
-        <Route path='/:id'><PostDetail /></Route>
-        <Route path='/createPost'><PostCreate /></Route>
+        <Route exact path="/" component={Posts} />
+        <Route path="/createpost" component={PostCreate} />
+        <Route path='/:id' component={PostDetail}/>
+        
       </Switch>
     </div>
   );
