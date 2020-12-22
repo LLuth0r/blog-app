@@ -3,12 +3,13 @@ import axios from 'axios'
 const apiUrl = `https://unit3-blog-app.herokuapp.com/api`
 
 export const getPosts = async () => {
+  
   try {
     const response = await axios(`${apiUrl}/posts`)
     const posts = response.data
     return posts
   } catch (error) {
-    throw error
+    throw error 
   }
 }
 
