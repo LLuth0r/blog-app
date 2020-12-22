@@ -1,16 +1,15 @@
 .cards {
   display: flex;
-  flex-flow: wrap;
-  justify-content: center;
-  width: 20vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 60vw;
   margin: 0;
 }
 
 .postCard {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 20vw;
+  width: 15vw;
 }
 
 .imgURL {
