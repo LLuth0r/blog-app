@@ -1,13 +1,12 @@
 import "./PostDetail.css";
 import Layout from "../../components/shared/Layout/Layout";
 import { getPost, deletePost } from "../../services/posts";
-import { useParams, Redirect } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 function PostDetail(props) {
   const [post, setPost] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
-  const [isDeleted, setDeleted] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
@@ -22,10 +21,6 @@ function PostDetail(props) {
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
-  }
-
-  if (isDeleted) {
-    return <Redirect to={`/posts`} />;
   }
 
   return (
