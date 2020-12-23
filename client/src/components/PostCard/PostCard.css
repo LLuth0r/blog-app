@@ -1,31 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
 .cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 60vw;
-  margin: 0;
-}
-
-.postCard {
-  justify-content: center;
-  width: 15vw;
+  justify-content: space-evenly;
+  width: 90vw;
   margin-top: 50px;
 }
 
-.imgURL {
-  width: 150px;
-  height: auto;
+.postCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 15vw;
+  height: 260px;
+  font-family: "Courgette";
+  border-style: solid;
+  border-width: 2px;
+  border-color: gray;
 }
 
-.title {
-  flex-direction: column;
+.card {
+  align-self: center;
+  margin: 0;
+}
+
+.card-imgURL {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-top: 10px;
+}
+
+.card-title {
+  margin-top: 10px;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
 
-.author {
-  flex-direction: column;
+.card-author {
   text-align: center;
+  font-size: 16px;
 }
