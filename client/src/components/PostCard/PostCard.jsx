@@ -8,12 +8,12 @@ export default function PostCard(props) {
   return (
     <div className="postCard">
       <Link className="card" to={`/posts/${props._id}`}>
-        <img className="imgURL" src={props.imgURL} alt="" />
+        <img className="card-imgURL" src={props.imgURL} alt="" />
       </Link>
-      <div className="title" href={props.buyLink}>
+      <div className="card-title" href={props.buyLink}>
         {props.title}
       </div>
-      <div className="author">{props.author}</div>
+      <div className="card-author">{props.author}</div>
     </div>
   );
 }

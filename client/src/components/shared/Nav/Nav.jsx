@@ -7,7 +7,7 @@ const Nav = () => {
     <nav>
       <div className="nav">
         <NavLink className="logo" to="/">
-          Spoon Blog App
+          Spoon Blog
         </NavLink>
         <div className="links">
           <NavLink className="link" to="/createpost">
