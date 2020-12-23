@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+
+.product-detail {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+  font-family: "Courgette";
+}
+
+.product-detail-image {
+  width: 30vw;
+  height: auto;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 30px;
+  margin: 10px;
+}
+
+.author {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.content {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.delete-button {
+  width: 75px;
+  height: 30px;
+  background-color: #5984af;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  margin: 10px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}

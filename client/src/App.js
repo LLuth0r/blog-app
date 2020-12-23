@@ -18,7 +18,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Posts} />
         <Route path="/createpost" component={PostCreate} />
-        <Route path='/:id' component={PostDetail}/>
+        <Route path='/posts/:id' component={PostDetail}/>
         
       </Switch>
     </div>
